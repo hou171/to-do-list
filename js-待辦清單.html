@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>待辦清單</title>
+  <link rel="stylesheet" href="./待辦清單.css">
+</head>
+<body>
+  <div class="container">
+    <h1>TODO LIST</h1>
+    <div class="card input">
+      <input id="item-input" type="text" placeholder="請輸入待辦事項">
+      <button type="button" id="add-btn" class="action-btn" title="新增項目">新增</button>
+    </div>
+    <div class="card card-list">
+      <div class="tab-box">
+        <button type="button" class="tab active" data-status="all">全部</button>
+        <button type="button" class="tab" data-status="undone">待完成</button>
+        <button type="button" class="tab" data-status="done">已完成</button>
+      </div>
+      <div class="card-content">
+        <ul class="list">
+          <li class="item">
+            <label class="checkbox">
+              <input type="checkbox" class="done-input">
+              <span class="content">倒垃圾(範例)</span>
+            </label>
+            <button type="button" class="edit-btn" title="編輯項目" aria-label="編輯項目按鈕">X</button>
+            <button type="button" class="delete-btn" title="刪除項目" aria-label="刪除項目按鈕">X</button>
+          </li>
+        </ul>
+        <div class="footer-list">
+          <p id="show-count">0 個待完成項目</p>
+          <button id="clear-all-btn" type="button">清空所有項目</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./待辦清單.js"></script>
+</body>
+</html>
